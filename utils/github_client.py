@@ -18,9 +18,10 @@ class GitHubClient:
     
     def delete_image(self, filepath):
         # 获取文件SHA值
-        contents = self.repo.get_contents(filepath)
+        contents = self.repo.get_contents(filepath, ref="images-branch")
         self.repo.delete_file(
             filepath, 
             f"Remove image: {filepath}", 
-            contents.sha
+            contents.sha,
+            branch="images-branch"
         )
