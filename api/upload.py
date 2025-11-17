@@ -33,7 +33,7 @@ def upload_image():
     )
 
     try:
-        image_path = github_client.upload_image(processed_image, new_filename)
+        image_path = github_client.upload_image(processed_image.getvalue(), new_filename)
         image_url = f"https://{os.environ.get('CUSTOM_DOMAIN')}/{image_path}"
 
         return jsonify({

@@ -47,7 +47,7 @@ class ImageProcessor:
     
     def allowed_file(self, filename, file_stream=None):
         """
-        验证文件类型是否允许上传[1,3](@ref)
+        验证文件类型是否允许上传
         
         Args:
             filename: 文件名
@@ -86,7 +86,7 @@ class ImageProcessor:
     
     def validate_image(self, file_stream):
         """
-        验证图片文件的完整性和有效性[5](@ref)
+        验证图片文件的完整性和有效性
         
         Args:
             file_stream: 文件流
@@ -123,7 +123,7 @@ class ImageProcessor:
     
     def unify_image_format(self, image, target_format=None):
         """
-        统一图片格式并优化[1,7,8](@ref)
+        统一图片格式并优化
         
         Args:
             image: PIL Image对象
@@ -151,7 +151,7 @@ class ImageProcessor:
     
     def optimize_image(self, image, max_dimension=2048):
         """
-        优化图片大小和质量[3,5](@ref)
+        优化图片大小和质量
         
         Args:
             image: PIL Image对象
@@ -171,7 +171,7 @@ class ImageProcessor:
     
     def process_image(self, file_stream, filename, optimize=True):
         """
-        完整的图片处理流程：验证 → 优化 → 格式统一[8](@ref)
+        完整的图片处理流程：验证 → 优化 → 格式统一
         
         Args:
             file_stream: 文件流
@@ -214,7 +214,7 @@ class ImageProcessor:
             # 6. 生成新文件名
             new_filename = self.generate_filename(self.target_format.lower())
             
-            return True, "图片处理成功", output_buffer.getvalue(), new_filename
+            return True, "图片处理成功", output_buffer, new_filename
             
         except Exception as e:
             return False, f"图片处理失败: {str(e)}", None, None

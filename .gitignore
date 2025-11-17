@@ -1,6 +1,3 @@
-# static
-images/
-images/*
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
@@ -11,6 +8,8 @@ __pycache__/
 
 # Distribution / packaging
 .Python
+images/
+images/*
 build/
 develop-eggs/
 dist/
