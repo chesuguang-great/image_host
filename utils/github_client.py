@@ -12,7 +12,7 @@ class GitHubClient:
             f"images/{filename}", 
             f"Add image: {filename}", 
             image_binary_data,
-            branch="main"
+            branch="images-branch"
         )
         return f"images/{filename}"
     
