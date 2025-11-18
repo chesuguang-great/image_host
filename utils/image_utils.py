@@ -32,7 +32,7 @@ class ImageProcessor:
         'webp': 'WEBP'
     }
     
-    def __init__(self, max_size_mb=5, target_format='JPEG', quality=85):
+    def __init__(self, max_size_mb=5, target_format='PNG', quality=85):
         """
         初始化图片处理器
         
